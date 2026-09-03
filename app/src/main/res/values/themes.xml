@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Setup screen: framework DayNight theme, no AppCompat. -->
+    <style name="Theme.InputSwitcher" parent="@android:style/Theme.DeviceDefault.DayNight" />
+
+    <!-- SwitchActivity: fully invisible, no window animation, so a tap looks like a direct switch. -->
+    <style name="Theme.InputSwitcher.Invisible" parent="@android:style/Theme.Translucent.NoTitleBar">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowAnimationStyle">@null</item>
+        <item name="android:windowNoDisplay">true</item>
+    </style>
+
+    <!-- Widget pieces (RemoteViews-safe: only LinearLayout, ImageView, TextView attributes). -->
+    <style name="Widget.InputSwitcher.Button" parent="">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:gravity">center</item>
+        <item name="android:padding">8dp</item>
+        <item name="android:background">@drawable/widget_button_bg</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+    </style>
+
+    <style name="Widget.InputSwitcher.ButtonIcon" parent="">
+        <!-- Weighted so the icon shrinks gracefully if the launcher gives us a short cell. -->
+        <item name="android:layout_width">@dimen/widget_icon_size</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:maxHeight">@dimen/widget_icon_size</item>
+        <item name="android:adjustViewBounds">true</item>
+        <item name="android:scaleType">fitCenter</item>
+        <item name="android:tint">@color/widget_on_surface</item>
+    </style>
+
+    <style name="Widget.InputSwitcher.ButtonLabel" parent="">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">4dp</item>
+        <item name="android:textSize">@dimen/widget_label_text</item>
+        <item name="android:textColor">@color/widget_on_surface</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+</resources>

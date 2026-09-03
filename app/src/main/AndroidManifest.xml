@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--
+        Package visibility (API 30+). We start com.cvte.tv.setting/.TifPlayerActivity with an
+        explicit component intent, so the package must be visible to us. No QUERY_ALL_PACKAGES.
+    -->
+    <queries>
+        <package android:name="com.cvte.tv.setting" />
+        <package android:name="com.cvte.tv.api.impl" />
+    </queries>
+
+    <!--
+        No permissions: the direct transport is a plain broadcast plus an explicit activity start.
+        INTERNET is only needed for the optional IP-control fallback (loopback TCP to
+        com.dss.ipcontrol); it is a normal permission and costs nothing if unused.
+    -->
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.InputSwitcher">
+
+        <!-- Main "Input Switcher" icon: test buttons + pin widget / pin shortcuts. -->
+        <activity
+            android:name=".SetupActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!--
+            Invisible trampoline. Reads the target source from its intent (pinned shortcuts) or from
+            the launching alias' meta-data, runs the switch, and finishes immediately so nothing
+            shows up in Recents.
+        -->
+        <activity
+            android:name=".SwitchActivity"
+            android:excludeFromRecents="true"
+            android:exported="true"
+            android:noHistory="true"
+            android:taskAffinity=""
+            android:theme="@style/Theme.InputSwitcher.Invisible" />
+
+        <activity-alias
+            android:name=".ConferenceHub"
+            android:exported="true"
+            android:icon="@mipmap/ic_launcher_conference_hub"
+            android:label="@string/label_conference_hub"
+            android:targetActivity=".SwitchActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <meta-data
+                android:name="source"
+                android:value="5" />
+        </activity-alias>
+
+        <activity-alias
+            android:name=".FrontUsbC"
+            android:exported="true"
+            android:icon="@mipmap/ic_launcher_front_usbc"
+            android:label="@string/label_front_usbc"
+            android:targetActivity=".SwitchActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <meta-data
+                android:name="source"
+                android:value="15" />
+        </activity-alias>
+
+        <activity-alias
+            android:name=".FrontHdmi"
+            android:exported="true"
+            android:icon="@mipmap/ic_launcher_front_hdmi"
+            android:label="@string/label_front_hdmi"
+            android:targetActivity=".SwitchActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <meta-data
+                android:name="source"
+                android:value="7" />
+        </activity-alias>
+
+        <!--
+            Target of the widget buttons' PendingIntents. Not exported: the PendingIntent is sent
+            with our own identity, so an explicit component intent reaches it regardless.
+        -->
+        <receiver
+            android:name=".SwitchReceiver"
+            android:exported="false" />
+
+        <receiver
+            android:name=".InputSwitcherWidget"
+            android:exported="true"
+            android:label="@string/widget_label">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/input_switcher_widget_info" />
+        </receiver>
+    </application>
+
+</manifest>

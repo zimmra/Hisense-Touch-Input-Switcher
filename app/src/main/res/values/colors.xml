@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Widget card: Material 3 light surface-container tones. Night variants in values-night. -->
+    <color name="widget_surface">#F3EDF7</color>
+    <color name="widget_on_surface">#1D1B20</color>
+    <color name="widget_ripple">#331D1B20</color>
+
+    <!-- Adaptive launcher icon backgrounds, one accent per input. -->
+    <color name="ic_launcher_bg_app">#4A3F7A</color>
+    <color name="ic_launcher_bg_conference_hub">#1E63D6</color>
+    <color name="ic_launcher_bg_front_usbc">#0E8A6E</color>
+    <color name="ic_launcher_bg_front_hdmi">#E0731D</color>
+    <color name="ic_launcher_fg">#FFFFFF</color>
+</resources>

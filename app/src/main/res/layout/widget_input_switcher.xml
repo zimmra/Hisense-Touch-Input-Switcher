@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Home-screen widget: one rounded card (28dp radius, M3 surface colour, subtle elevation) with three
+    equal-width buttons, each an icon above a label. Buttons are LinearLayouts so the whole area is the
+    tap target; clicks are wired in InputSwitcherWidget.buildRemoteViews().
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/widget_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/widget_card_bg"
+    android:baselineAligned="false"
+    android:elevation="2dp"
+    android:orientation="horizontal"
+    android:padding="@dimen/widget_padding">
+
+    <LinearLayout
+        android:id="@+id/button_conference_hub"
+        style="@style/Widget.InputSwitcher.Button">
+
+        <ImageView
+            style="@style/Widget.InputSwitcher.ButtonIcon"
+            android:contentDescription="@string/label_conference_hub"
+            android:src="@drawable/ic_hdmi" />
+
+        <TextView
+            style="@style/Widget.InputSwitcher.ButtonLabel"
+            android:text="@string/label_conference_hub" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/button_front_usbc"
+        style="@style/Widget.InputSwitcher.Button">
+
+        <ImageView
+            style="@style/Widget.InputSwitcher.ButtonIcon"
+            android:contentDescription="@string/label_front_usbc"
+            android:src="@drawable/ic_usb_c" />
+
+        <TextView
+            style="@style/Widget.InputSwitcher.ButtonLabel"
+            android:text="@string/label_front_usbc" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/button_front_hdmi"
+        style="@style/Widget.InputSwitcher.Button">
+
+        <ImageView
+            style="@style/Widget.InputSwitcher.ButtonIcon"
+            android:contentDescription="@string/label_front_hdmi"
+            android:src="@drawable/ic_hdmi" />
+
+        <TextView
+            style="@style/Widget.InputSwitcher.ButtonLabel"
+            android:text="@string/label_front_hdmi" />
+    </LinearLayout>
+
+</LinearLayout>

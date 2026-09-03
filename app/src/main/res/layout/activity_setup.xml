@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/setup_padding">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/setup_heading"
+            android:textSize="@dimen/setup_heading_text"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/setup_hint"
+            android:textSize="@dimen/setup_text" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:baselineAligned="false"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/setup_button_conference_hub"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/setup_button_height"
+                android:layout_marginEnd="8dp"
+                android:layout_weight="1"
+                android:drawableTop="@drawable/ic_hdmi"
+                android:text="@string/label_conference_hub"
+                android:textSize="@dimen/setup_text" />
+
+            <Button
+                android:id="@+id/setup_button_front_usbc"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/setup_button_height"
+                android:layout_marginEnd="8dp"
+                android:layout_weight="1"
+                android:drawableTop="@drawable/ic_usb_c"
+                android:text="@string/label_front_usbc"
+                android:textSize="@dimen/setup_text" />
+
+            <Button
+                android:id="@+id/setup_button_front_hdmi"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/setup_button_height"
+                android:layout_weight="1"
+                android:drawableTop="@drawable/ic_hdmi"
+                android:text="@string/label_front_hdmi"
+                android:textSize="@dimen/setup_text" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="@string/setup_home_heading"
+            android:textSize="@dimen/setup_heading_text"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/button_add_widget"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/setup_button_height"
+            android:layout_marginTop="8dp"
+            android:text="@string/setup_add_widget"
+            android:textSize="@dimen/setup_text" />
+
+        <Button
+            android:id="@+id/button_add_shortcuts"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/setup_button_height"
+            android:layout_marginTop="8dp"
+            android:text="@string/setup_add_shortcuts"
+            android:textSize="@dimen/setup_text" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="@string/setup_transport_heading"
+            android:textSize="@dimen/setup_heading_text"
+            android:textStyle="bold" />
+
+        <RadioGroup
+            android:id="@+id/radio_transport"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:id="@+id/radio_transport_direct"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minHeight="56dp"
+                android:text="@string/setup_transport_direct"
+                android:textSize="@dimen/setup_text" />
+
+            <RadioButton
+                android:id="@+id/radio_transport_ip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minHeight="56dp"
+                android:text="@string/setup_transport_ip"
+                android:textSize="@dimen/setup_text" />
+        </RadioGroup>
+
+        <EditText
+            android:id="@+id/edit_ip_port"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/setup_ip_port_hint"
+            android:imeOptions="actionDone"
+            android:importantForAutofill="no"
+            android:inputType="number"
+            android:maxLength="5"
+            android:textSize="@dimen/setup_text" />
+
+        <TextView
+            android:id="@+id/text_transport"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:textSize="@dimen/setup_text" />
+
+        <TextView
+            android:id="@+id/text_status"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textSize="@dimen/setup_text" />
+
+        <TextView
+            android:id="@+id/text_source_change"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textSize="@dimen/setup_text" />
+    </LinearLayout>
+</ScrollView>

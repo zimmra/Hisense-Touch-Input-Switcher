@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Input Switcher</string>
+    <string name="widget_label">Input Switcher</string>
+    <string name="widget_description">Switch the display input with one tap</string>
+
+    <!-- Exact user-facing labels; also mirrored in Source.kt -->
+    <string name="label_conference_hub">Conference Hub</string>
+    <string name="label_front_usbc">Front USB-C</string>
+    <string name="label_front_hdmi">Front HDMI</string>
+
+    <!-- Setup screen -->
+    <string name="setup_heading">Switch input</string>
+    <string name="setup_hint">Tap a button to switch the display. Use the actions below to put the switcher on the home screen.</string>
+    <string name="setup_home_heading">Home screen</string>
+    <string name="setup_add_widget">Add widget to home screen</string>
+    <string name="setup_add_shortcuts">Add shortcuts to home screen</string>
+    <string name="setup_transport_heading">Transport</string>
+    <string name="setup_transport_direct">Direct (CVTE broadcast + TifPlayerActivity)</string>
+    <string name="setup_transport_ip">IP control (RS-232 frame over loopback TCP)</string>
+    <string name="setup_ip_port_hint">IP control port (see README)</string>
+    <string name="status_transport">Transport: %1$s</string>
+    <string name="status_last">Last switch: %1$s</string>
+    <string name="status_none">none yet</string>
+    <string name="status_source_change">Last source change broadcast: %1$s</string>
+
+    <!-- Toasts -->
+    <string name="toast_switch_failed">Could not switch to %1$s: %2$s</string>
+    <string name="toast_unknown_source">Input Switcher: unknown source</string>
+    <string name="toast_pin_widget_unsupported">This launcher does not support pinning widgets. Long-press the home screen → Widgets → Input Switcher.</string>
+    <string name="toast_pin_shortcut_unsupported">This launcher does not support pinning shortcuts. Drag the icons from the app drawer instead.</string>
+</resources>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- USB-C receptacle glyph: rounded pill outline with a filled inner tongue. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    <path
+        android:pathData="M6.5,8 H17.5 A4,4 0 0 1 17.5,16 H6.5 A4,4 0 0 1 6.5,8 Z"
+        android:strokeColor="@android:color/white"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"
+        android:strokeWidth="1.8" />
+    <path
+        android:fillColor="@android:color/white"
+        android:pathData="M8,10.6 H16 A1.4,1.4 0 0 1 16,13.4 H8 A1.4,1.4 0 0 1 8,10.6 Z" />
+</vector>

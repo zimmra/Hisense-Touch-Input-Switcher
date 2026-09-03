@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Touch feedback for a widget button. An explicit ripple (rather than ?attr/selectableItemBackground)
+    so it resolves identically no matter which theme the host launcher inflates our RemoteViews with.
+    The mask keeps the ripple inside a rounded rect matching the card.
+-->
+<ripple xmlns:android="http://schemas.android.com/apk/res/android"
+    android:color="@color/widget_ripple">
+    <item android:id="@android:id/mask">
+        <shape android:shape="rectangle">
+            <corners android:radius="@dimen/widget_button_corner_radius" />
+            <solid android:color="@android:color/white" />
+        </shape>
+    </item>
+</ripple>

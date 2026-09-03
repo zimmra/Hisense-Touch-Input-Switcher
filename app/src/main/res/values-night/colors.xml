@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Widget card: Material 3 dark surface-container tones. -->
+    <color name="widget_surface">#2B2930</color>
+    <color name="widget_on_surface">#E6E0E9</color>
+    <color name="widget_ripple">#33E6E0E9</color>
+</resources>
