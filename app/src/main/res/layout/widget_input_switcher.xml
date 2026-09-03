@@ -21,7 +21,7 @@
         <ImageView
             style="@style/Widget.InputSwitcher.ButtonIcon"
             android:contentDescription="@string/label_conference_hub"
-            android:src="@drawable/ic_hdmi" />
+            android:src="@drawable/ic_conference" />
 
         <TextView
             style="@style/Widget.InputSwitcher.ButtonLabel"

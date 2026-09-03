@@ -155,7 +155,7 @@ app/src/main/res/
   layout/activity_setup.xml
   xml/input_switcher_widget_info.xml widget metadata (~4x1 cells, horizontal resize, home screen)
   mipmap-anydpi-v26/                 adaptive icons: app + one per input
-  drawable/                          HDMI / USB-C glyphs, widget card + ripple
+  drawable/                          conference / HDMI / USB-C glyphs, widget card + ripple
   values/, values-night/             strings, M3-ish surface colours for light/dark
 keystore/                            committed release keystore (see above)
 deploy.sh                            adb install + open setup screen

@@ -16,7 +16,7 @@ enum class Source(
     val iconRes: Int,
     val launcherIconRes: Int,
 ) {
-    CONFERENCE_HUB(5, "Conference Hub", R.drawable.ic_hdmi, R.mipmap.ic_launcher_conference_hub),
+    CONFERENCE_HUB(5, "Conference Hub", R.drawable.ic_conference, R.mipmap.ic_launcher_conference_hub),
     FRONT_USBC(15, "Front USB-C", R.drawable.ic_usb_c, R.mipmap.ic_launcher_front_usbc),
     FRONT_HDMI(7, "Front HDMI", R.drawable.ic_hdmi, R.mipmap.ic_launcher_front_hdmi);
 
