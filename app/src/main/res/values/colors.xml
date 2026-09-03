@@ -7,9 +7,7 @@
 
     <!-- Adaptive launcher icon backgrounds, one accent per input. -->
     <color name="ic_launcher_bg_app">#4A3F7A</color>
-    <color name="ic_launcher_bg_conference_hub">#CAB2FB</color>
-    <!-- Dark glyph for the light lavender Conference Hub background (white would be ~1.9:1 contrast). -->
-    <color name="ic_launcher_fg_conference_hub">#2B2150</color>
+    <color name="ic_launcher_bg_conference_hub">#7E61AB</color>
     <color name="ic_launcher_bg_front_usbc">#0E8A6E</color>
     <color name="ic_launcher_bg_front_hdmi">#E0731D</color>
     <color name="ic_launcher_fg">#FFFFFF</color>
