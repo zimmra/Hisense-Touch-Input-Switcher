@@ -12,12 +12,12 @@
         android:translateY="27">
         <path
             android:pathData="M6.5,8 H17.5 A4,4 0 0 1 17.5,16 H6.5 A4,4 0 0 1 6.5,8 Z"
-            android:strokeColor="@color/ic_launcher_fg"
+            android:strokeColor="@color/ic_launcher_fg_front_usbc"
             android:strokeLineCap="round"
             android:strokeLineJoin="round"
             android:strokeWidth="1.8" />
         <path
-            android:fillColor="@color/ic_launcher_fg"
+            android:fillColor="@color/ic_launcher_fg_front_usbc"
             android:pathData="M8,10.6 H16 A1.4,1.4 0 0 1 16,13.4 H8 A1.4,1.4 0 0 1 8,10.6 Z" />
     </group>
 </vector>
